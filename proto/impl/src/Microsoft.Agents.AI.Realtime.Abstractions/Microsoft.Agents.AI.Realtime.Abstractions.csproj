@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Microsoft.Agents.AI</RootNamespace>
+    <AssemblyName>Microsoft.Agents.AI.Realtime.Abstractions</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Reuse AgentSessionStateBag and friends from the existing AF abstractions
+         package per implementation-plan.md §3.2 / §3.6. -->
+    <ProjectReference Include="$(DotnetSrcRoot)Microsoft.Agents.AI.Abstractions\Microsoft.Agents.AI.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.OpenAI" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Foundry" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Hosting" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Foundry.Hosting.Realtime" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.TestSupport" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Abstractions.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.OpenAI.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Foundry.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Hosting.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Foundry.Hosting.Realtime.UnitTests" />
+    <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+  </ItemGroup>
+
+</Project>

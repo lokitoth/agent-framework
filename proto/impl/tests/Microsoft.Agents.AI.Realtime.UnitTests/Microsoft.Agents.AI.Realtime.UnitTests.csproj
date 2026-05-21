@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Microsoft.Agents.AI.Realtime.UnitTests</RootNamespace>
+    <AssemblyName>Microsoft.Agents.AI.Realtime.UnitTests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Microsoft.Agents.AI.Realtime\Microsoft.Agents.AI.Realtime.csproj" />
+    <ProjectReference Include="..\..\src\Microsoft.Agents.AI.Realtime.Abstractions\Microsoft.Agents.AI.Realtime.Abstractions.csproj" />
+    <ProjectReference Include="..\TestSupport\Microsoft.Agents.AI.Realtime.TestSupport\Microsoft.Agents.AI.Realtime.TestSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+</Project>

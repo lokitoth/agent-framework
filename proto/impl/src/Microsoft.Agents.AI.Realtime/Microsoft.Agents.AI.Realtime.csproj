@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Microsoft.Agents.AI</RootNamespace>
+    <AssemblyName>Microsoft.Agents.AI.Realtime</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Agents.AI.Realtime.Abstractions\Microsoft.Agents.AI.Realtime.Abstractions.csproj" />
+    <!-- Reuse AIAgent + AIAgentBuilder shapes for the AsAIAgent bridge. -->
+    <ProjectReference Include="$(DotnetSrcRoot)Microsoft.Agents.AI\Microsoft.Agents.AI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.OpenAI" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Foundry" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Hosting" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Foundry.Hosting.Realtime" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.TestSupport" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.OpenAI.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Foundry.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Hosting.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Foundry.Hosting.Realtime.UnitTests" />
+    <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+  </ItemGroup>
+
+</Project>

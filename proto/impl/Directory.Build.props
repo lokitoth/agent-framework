@@ -1,0 +1,30 @@
+<Project>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- M.E.AI realtime types are still flagged Experimental upstream; the
+         whole proto is opting in. AF-side surface uses MEAI-REALTIME-001
+         (rendered MEAIREALTIME001) and is suppressed here too. -->
+    <NoWarn>$(NoWarn);MEAI001;OPENAI001;MEAIREALTIME001</NoWarn>
+
+    <!-- Nothing in this proto is packed as a NuGet package. -->
+    <IsPackable>false</IsPackable>
+
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Resolve repo paths relative to this file so cross-solution
+         ProjectReferences into /dotnet/src can use a stable anchor. -->
+    <ProtoImplRoot>$(MSBuildThisFileDirectory)</ProtoImplRoot>
+    <RepoRoot>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\..\'))</RepoRoot>
+    <DotnetSrcRoot>$(RepoRoot)dotnet\src\</DotnetSrcRoot>
+  </PropertyGroup>
+
+</Project>

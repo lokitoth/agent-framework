@@ -1,0 +1,12 @@
+<Project>
+
+  <!-- TestSupport is a library shared across UnitTests projects, not a runnable
+       test project. Opt out of the test-runner / test-package additions in
+       tests/Directory.Build.props by setting this before importing. -->
+  <PropertyGroup>
+    <IsTestProjectShared>true</IsTestProjectShared>
+  </PropertyGroup>
+
+  <Import Project="..\Directory.Build.props" />
+
+</Project>

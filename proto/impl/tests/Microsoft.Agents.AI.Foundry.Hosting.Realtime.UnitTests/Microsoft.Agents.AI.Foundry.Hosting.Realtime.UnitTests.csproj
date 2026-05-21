@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Microsoft.Agents.AI.Foundry.Hosting.Realtime.UnitTests</RootNamespace>
+    <AssemblyName>Microsoft.Agents.AI.Foundry.Hosting.Realtime.UnitTests</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Microsoft.Agents.AI.Realtime\Microsoft.Agents.AI.Realtime.csproj" />
+    <ProjectReference Include="..\..\src\Microsoft.Agents.AI.Realtime.Abstractions\Microsoft.Agents.AI.Realtime.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\Microsoft.Agents.AI.Realtime.Hosting\Microsoft.Agents.AI.Realtime.Hosting.csproj" />
+    <ProjectReference Include="..\..\src\Microsoft.Agents.AI.Foundry.Hosting.Realtime\Microsoft.Agents.AI.Foundry.Hosting.Realtime.csproj" />
+    <ProjectReference Include="..\TestSupport\Microsoft.Agents.AI.Realtime.TestSupport\Microsoft.Agents.AI.Realtime.TestSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+</Project>

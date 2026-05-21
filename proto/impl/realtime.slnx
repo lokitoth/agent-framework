@@ -1,0 +1,31 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Release" />
+  </Configurations>
+  <Folder Name="/_solution/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+    <File Path=".gitignore" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Microsoft.Agents.AI.Realtime.Abstractions/Microsoft.Agents.AI.Realtime.Abstractions.csproj" />
+    <Project Path="src/Microsoft.Agents.AI.Realtime/Microsoft.Agents.AI.Realtime.csproj" />
+    <Project Path="src/Microsoft.Agents.AI.Realtime.OpenAI/Microsoft.Agents.AI.Realtime.OpenAI.csproj" />
+    <Project Path="src/Microsoft.Agents.AI.Realtime.Foundry/Microsoft.Agents.AI.Realtime.Foundry.csproj" />
+    <Project Path="src/Microsoft.Agents.AI.Realtime.Hosting/Microsoft.Agents.AI.Realtime.Hosting.csproj" />
+    <Project Path="src/Microsoft.Agents.AI.Foundry.Hosting.Realtime/Microsoft.Agents.AI.Foundry.Hosting.Realtime.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Microsoft.Agents.AI.Realtime.Abstractions.UnitTests/Microsoft.Agents.AI.Realtime.Abstractions.UnitTests.csproj" />
+    <Project Path="tests/Microsoft.Agents.AI.Realtime.UnitTests/Microsoft.Agents.AI.Realtime.UnitTests.csproj" />
+    <Project Path="tests/Microsoft.Agents.AI.Realtime.OpenAI.UnitTests/Microsoft.Agents.AI.Realtime.OpenAI.UnitTests.csproj" />
+    <Project Path="tests/Microsoft.Agents.AI.Realtime.Foundry.UnitTests/Microsoft.Agents.AI.Realtime.Foundry.UnitTests.csproj" />
+    <Project Path="tests/Microsoft.Agents.AI.Realtime.Hosting.UnitTests/Microsoft.Agents.AI.Realtime.Hosting.UnitTests.csproj" />
+    <Project Path="tests/Microsoft.Agents.AI.Foundry.Hosting.Realtime.UnitTests/Microsoft.Agents.AI.Foundry.Hosting.Realtime.UnitTests.csproj" />
+  </Folder>
+  <Folder Name="/tests/TestSupport/">
+    <Project Path="tests/TestSupport/Microsoft.Agents.AI.Realtime.TestSupport/Microsoft.Agents.AI.Realtime.TestSupport.csproj" />
+  </Folder>
+</Solution>

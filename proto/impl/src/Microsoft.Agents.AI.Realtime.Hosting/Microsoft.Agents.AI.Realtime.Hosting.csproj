@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Microsoft.Agents.AI.Realtime.Hosting</RootNamespace>
+    <AssemblyName>Microsoft.Agents.AI.Realtime.Hosting</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.AI" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microsoft.Agents.AI.Realtime.Abstractions\Microsoft.Agents.AI.Realtime.Abstractions.csproj" />
+    <ProjectReference Include="..\Microsoft.Agents.AI.Realtime\Microsoft.Agents.AI.Realtime.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Foundry.Hosting.Realtime" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Realtime.Hosting.UnitTests" />
+    <InternalsVisibleTo Include="Microsoft.Agents.AI.Foundry.Hosting.Realtime.UnitTests" />
+    <InternalsVisibleTo Include="DynamicProxyGenAssembly2" />
+  </ItemGroup>
+
+</Project>

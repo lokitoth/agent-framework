@@ -1,0 +1,8 @@
+# External sources cloned for reference only (e.g., MEAI).
+external/
+
+# .NET build artifacts under the prototype impl tree.
+impl/**/bin/
+impl/**/obj/
+impl/**/TestResults/
+impl/**/*.user
